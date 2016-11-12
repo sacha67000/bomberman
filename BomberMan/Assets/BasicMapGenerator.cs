@@ -39,6 +39,8 @@ public class BasicMapGenerator : MonoBehaviour {
         }
 
         //Grass
+        GameObject objGrass = (GameObject)Instantiate(grass, new Vector3(20, -1, 15), Quaternion.identity);
+        objGrass.transform.SetParent(this.gameObject.transform);
         /*
         for (int x = -30; x < 70; x++)
         {
