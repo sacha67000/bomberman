@@ -8,7 +8,6 @@ public class MapScript : MonoBehaviour {
 
     public GameObject box;
     public GameObject[,] blockArray = new GameObject[40, 30];
-    public GameObject[,] floorList = new GameObject[40, 30];
     void Start()
     {
         // Putting all the walls in the block array
@@ -36,7 +35,6 @@ public class MapScript : MonoBehaviour {
                 }
             }
         }
-
         // Checking that spawns are free
         checkSpawns();
 
