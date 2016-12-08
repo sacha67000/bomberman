@@ -4,8 +4,12 @@ using System.Collections;
 public class BombScript : MonoBehaviour {
     public int bombRange;
     public GameObject owner;
+    public GameObject explosion;
     private MapScript map;
     private float timer = 0;
+    private bool sizeSwitch = false;
+    private Vector3 bigScale = new Vector3(1.3f, 1.3f, 1.3f);
+    private Vector3 smallScale = new Vector3(1.0f, 1.0f, 1.0f);
 
     // Use this for initialization
     void Start () {
@@ -56,6 +60,12 @@ public class BombScript : MonoBehaviour {
                 break;
             }
         }
+        foreach (Transform child in explosion.transform)
+        {
+            child.gameObject.GetComponent<ParticleSystem>().startLifetime = (bombRange - 1) * 0.025f;
+        }
+        explosion.SetActive(true);
+        explosion.transform.parent = null;
         Destroy(map.blockArray[x, y]);
         map.blockArray[x, y] = null;
         owner.GetComponent<PlayerControl>().bombNumber += 1;
@@ -65,7 +75,22 @@ public class BombScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         timer += Time.deltaTime;
-        if (timer > 3)
+        if (timer > 5)
             explode();
-	}
+
+        if (sizeSwitch == false)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, bigScale, 2 * Time.deltaTime);
+            if ((int)timer == 0 || (int)timer == 2 || (int)timer == 4)
+                sizeSwitch = !sizeSwitch;
+        }
+        else
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, smallScale, 2 * Time.deltaTime);
+            if ((int)timer == 1 || (int)timer == 3)
+                sizeSwitch = !sizeSwitch;
+        }
+    }
+
+
 }
