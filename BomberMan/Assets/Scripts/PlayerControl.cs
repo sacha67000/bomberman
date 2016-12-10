@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour {
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
+            moveDirection *= (speed / 2);
             if (Input.GetButtonUp("Jump"))
             {
                 SpawnBomb();
