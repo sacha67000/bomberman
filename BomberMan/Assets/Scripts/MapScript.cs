@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,9 +11,20 @@ public class MapScript : MonoBehaviour {
     public GameObject[,] blockArray = new GameObject[19, 15];
     public List<GameObject> players = new List<GameObject>();
     public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
+
+    public GameObject menu;
+
+    public AudioClip victorySong;
+    public AudioClip drawSong;
     void Start()
     {
         players.Add(player1);
+        players.Add(player2);
+        players.Add(player3);
+        players.Add(player4);
         // Putting all the walls in the block array
         foreach (Transform child in transform)
         {
@@ -138,6 +150,37 @@ public class MapScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-	
+	    if (players.Count == 1)
+        {
+            Victory(players[0].GetComponent<PlayerControl>().player);
+        } else if (players.Count == 0)
+        {
+            Draw("Everyone is dead...");
+        }
 	}
+
+    void Victory(int player)
+    {
+        Time.timeScale = 0;
+        menu.SetActive(true);
+        GetComponent<AudioSource>().Stop();
+        AudioSource audio_menu = menu.GetComponent<AudioSource>();
+        GetComponent<AudioSource>().clip = victorySong;
+        GetComponent<AudioSource>().Play();
+        Text text = menu.GetComponentsInChildren<Text>()[1];
+        text.text = "Player " + player;
+    }
+
+    public void Draw(string message)
+    {
+        Time.timeScale = 0;
+        menu.SetActive(true);
+        GetComponent<AudioSource>().Stop();
+        AudioSource audio_menu = menu.GetComponent<AudioSource>();
+        audio_menu.clip = drawSong;
+        audio_menu.Play();
+        menu.GetComponentsInChildren<Text>()[0].text = "Draw";
+        Text text = menu.GetComponentsInChildren<Text>()[1];
+        text.text = message;
+    }
 }

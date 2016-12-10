@@ -37,6 +37,11 @@ public class BombScript : MonoBehaviour {
         int up = 0;
         int down = 0;
 
+        GameObject player;
+        if ((player = map.checkPlayersPosition(x, y)) != null)
+        {
+            player.GetComponent<PlayerControl>().DestroyPlayer();
+        }
         for (int i = 1; i < bombRange && (x + i) < 40; i++)
         {
             if (map.blockArray[x + i, y])
@@ -48,10 +53,9 @@ public class BombScript : MonoBehaviour {
             }
             else
             {
-                GameObject player;
                 if ((player = map.checkPlayersPosition(x + i, y)) != null)
                 {
-                    Destroy(player);
+                    player.GetComponent<PlayerControl>().DestroyPlayer();
                 }
             }
             right = i;
@@ -67,10 +71,9 @@ public class BombScript : MonoBehaviour {
             }
             else
             {
-                GameObject player;
                 if ((player = map.checkPlayersPosition(x, y + i)) != null)
                 {
-                    Destroy(player);
+                    player.GetComponent<PlayerControl>().DestroyPlayer();
                 }
             }
             up = i;
@@ -86,10 +89,9 @@ public class BombScript : MonoBehaviour {
             }
             else
             {
-                GameObject player;
                 if ((player = map.checkPlayersPosition(x - i, y)) != null)
                 {
-                    Destroy(player);
+                    player.GetComponent<PlayerControl>().DestroyPlayer();
                 }
             }
             left = i;
@@ -105,10 +107,9 @@ public class BombScript : MonoBehaviour {
             }
             else
             {
-                GameObject player;
                 if ((player = map.checkPlayersPosition(x, y - i)) != null)
                 {
-                    Destroy(player);
+                    player.GetComponent<PlayerControl>().DestroyPlayer();
                 }
             }
             down = i;
