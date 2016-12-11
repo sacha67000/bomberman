@@ -19,8 +19,12 @@ public class MapScript : MonoBehaviour {
 
     public AudioClip victorySong;
     public AudioClip drawSong;
+
+
+    private bool gameEnded = false;
     void Start()
     {
+        Time.timeScale = 1;
         players.Add(player1);
         players.Add(player2);
         players.Add(player3);
@@ -161,26 +165,32 @@ public class MapScript : MonoBehaviour {
 
     void Victory(int player)
     {
+        if (gameEnded == true)
+            return;
         Time.timeScale = 0;
         menu.SetActive(true);
         GetComponent<AudioSource>().Stop();
-        AudioSource audio_menu = menu.GetComponent<AudioSource>();
-        audio_menu.clip = victorySong;
-        audio_menu.Play();
+        GetComponent<AudioSource>().clip = victorySong;
+        GetComponent<AudioSource>().loop = false;
+        GetComponent<AudioSource>().Play();
         Text text = menu.GetComponentsInChildren<Text>()[1];
         text.text = "Player " + player;
+        gameEnded = true;
     }
 
     public void Draw(string message)
     {
+        if (gameEnded == true)
+            return;
         Time.timeScale = 0;
         menu.SetActive(true);
         GetComponent<AudioSource>().Stop();
-        AudioSource audio_menu = menu.GetComponent<AudioSource>();
-        audio_menu.clip = drawSong;
-        audio_menu.Play();
+        GetComponent<AudioSource>().clip = drawSong;
+        GetComponent<AudioSource>().loop = false;
+        GetComponent<AudioSource>().Play();
         menu.GetComponentsInChildren<Text>()[0].text = "Draw";
         Text text = menu.GetComponentsInChildren<Text>()[1];
         text.text = message;
+        gameEnded = true;
     }
 }
