@@ -1,4 +1,4 @@
-Initialize engine version: 5.4.2f2 (b7e030c65c9b)
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -6,6 +6,7 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     2018 MB
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
@@ -19,10 +20,26 @@ Loading C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test
 - Completed reload, in  0.304 seconds
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\System.dll (this message is harmless)
+=======
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.184 seconds
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\sacha\Desktop\Game Design\bomberman\BomberMan\Test_Data\Managed\System.dll (this message is harmless)
+>>>>>>> master
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+<<<<<<< HEAD
 UnloadTime: 0.747852 ms
 Setting up 2 worker threads for Enlighten.
   Thread -> id: 5fec -> priority: 1 
@@ -371,4 +388,44 @@ UnityEngine.EventSystems.StandaloneInputModule:Process()
 UnityEngine.EventSystems.EventSystem:Update()
  
 (Filename:  Line: -1)
+=======
+UnloadTime: 0.800888 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1fe8 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.302220 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3133.
+Total: 1.575999 ms (FindLiveObjects: 0.107111 ms CreateObjectMapping: 0.045333 ms MarkObjects: 0.441333 ms  DeleteObjects: 0.981332 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.091999 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 0.597333 ms (FindLiveObjects: 0.162222 ms CreateObjectMapping: 0.040444 ms MarkObjects: 0.385777 ms  DeleteObjects: 0.008888 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.853332 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 0.647110 ms (FindLiveObjects: 0.159111 ms CreateObjectMapping: 0.069333 ms MarkObjects: 0.408444 ms  DeleteObjects: 0.008888 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.935554 ms
+
+Unloading 200 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 2.390665 ms (FindLiveObjects: 0.023999 ms CreateObjectMapping: 0.019999 ms MarkObjects: 0.230222 ms  DeleteObjects: 2.115999 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.531999 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 1.485332 ms (FindLiveObjects: 0.137333 ms CreateObjectMapping: 0.042222 ms MarkObjects: 0.407999 ms  DeleteObjects: 0.897332 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.945332 ms
+
+Unloading 200 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 2.487554 ms (FindLiveObjects: 0.073333 ms CreateObjectMapping: 0.029777 ms MarkObjects: 0.217333 ms  DeleteObjects: 2.166665 ms)
+>>>>>>> master
 
