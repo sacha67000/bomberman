@@ -165,8 +165,8 @@ public class MapScript : MonoBehaviour {
         menu.SetActive(true);
         GetComponent<AudioSource>().Stop();
         AudioSource audio_menu = menu.GetComponent<AudioSource>();
-        GetComponent<AudioSource>().clip = victorySong;
-        GetComponent<AudioSource>().Play();
+        audio_menu.clip = victorySong;
+        audio_menu.Play();
         Text text = menu.GetComponentsInChildren<Text>()[1];
         text.text = "Player " + player;
     }

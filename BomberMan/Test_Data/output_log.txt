@@ -16,20 +16,26 @@ Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\Bom
 Loading C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.085 seconds
+- Completed reload, in  0.097 seconds
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Delanium\Documents\Seoul\Game designed\bomberman\BomberMan\Test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.820148 ms
+UnloadTime: 0.752592 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2ebc -> priority: 1 
-  Thread -> id: 5454 -> priority: 1 
+  Thread -> id: 4250 -> priority: 1 
+  Thread -> id: 61a0 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.805729 ms
+UnloadTime: 2.849976 ms
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3133.
-Total: 1.504395 ms (FindLiveObjects: 0.167111 ms CreateObjectMapping: 0.055308 ms MarkObjects: 0.426271 ms  DeleteObjects: 0.837926 ms)
+Total: 1.405235 ms (FindLiveObjects: 0.127209 ms CreateObjectMapping: 0.044641 ms MarkObjects: 0.431407 ms  DeleteObjects: 0.797234 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.798321 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 0.624197 ms (FindLiveObjects: 0.128790 ms CreateObjectMapping: 0.038716 ms MarkObjects: 0.446419 ms  DeleteObjects: 0.009876 ms)
 
