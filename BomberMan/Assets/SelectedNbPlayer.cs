@@ -11,6 +11,7 @@ public class SelectedNbPlayer : MonoBehaviour {
     void Start()
     {
         nb_players = 2;
+        PlayerPrefs.SetInt("Players", nb_players);
         text.text = "Players : " + nb_players;
     }
 
@@ -19,6 +20,7 @@ public class SelectedNbPlayer : MonoBehaviour {
         if (nb_players < 4)
         {
             nb_players++;
+            PlayerPrefs.SetInt("Players", nb_players);
             text.text = "Players : " + nb_players;
         }
     }
@@ -28,6 +30,7 @@ public class SelectedNbPlayer : MonoBehaviour {
         if (nb_players > 2)
         {
             nb_players--;
+            PlayerPrefs.SetInt("Players", nb_players);
             text.text = "Players : " + nb_players;
         }
     }
