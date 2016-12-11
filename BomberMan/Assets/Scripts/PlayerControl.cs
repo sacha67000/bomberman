@@ -19,15 +19,17 @@ public class PlayerControl : MonoBehaviour {
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("Players") < player)
-        {
-            Destroy(this.gameObject);
-        }
+
         map = GameObject.Find("Map").GetComponent<MapScript>();
         anim = GameObject.Find("Player" + player).GetComponent<Animation>();
     }
     void Update()
     {
+        if (PlayerPrefs.GetInt("Players") < player)
+        {
+            this.DestroyPlayer();
+        }
+
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
         {
